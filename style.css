@@ -1,0 +1,257 @@
+* {
+  --black: #020813;
+  --white: #ffffff;
+  --yellow: #fbd02c;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--black);
+  width: 100%;
+  height: 50px;
+  padding: 50px;
+  font-size: 13px;
+  z-index: 2;
+}
+nav img {
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  color: var(--white);
+  text-decoration: none;
+  list-style-type: none;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--white);
+}
+.menu li {
+  padding: 15px;
+  border-right: 2px solid var(--white);
+  cursor: pointer;
+}
+.menu li:last-child {
+  border-right: none;
+}
+
+.mainLink:hover {
+  color: var(--yellow);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  min-width: 150px;
+  background-color: var(--white);
+}
+.dropdown-menu li {
+  padding: 15px;
+  border-right: none;
+  list-style-type: none;
+  color: var(--black);
+}
+.dropdown-menu li a{
+  color: var(--black);
+}
+.dropdown-menu li:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+.dropdown-menu li:hover a {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.dropdown-menu2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+  width: 270px;
+  background-color: var(--white);
+}
+.dropdown-menu2 div {
+  padding: 15px;
+  color: var(--black);
+}
+.dropdown-menu2 div:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+.second {
+  top: 50%;
+}
+
+.firstSection {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  width: 100%;
+  height: 500px;
+}
+.firstSection img.laptop {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  border-radius: 40px 0 0 40px ;
+  margin-left: auto;
+  margin-right: 0;
+  height: 400px;
+}
+.firstSection img.star {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  height: 200px;
+}
+.firstSection .left1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.firstSection .left1 button {
+  background-color: var(--yellow);
+  text-decoration: none;
+  color: var(--white);
+
+  padding: 10px;
+  font-size: 13px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+.firstSection .left1 button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+.firstSection .left1 p{
+  color: var(--white);
+  font-size: 40px;
+  font-weight: bold;
+}
+.firstSection .left1 button, p{
+  margin-left: 25%;
+}
+.firstSection .left1 button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.firstSection .left1 .star2 {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: 30%;
+}
+.firstSection .left1 .ring {
+  position: absolute;
+  width: 350px;
+  top: 70%;
+  left: -15%;
+}
+.firstSection .right1 {
+  position: relative;
+  width: 50%;
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.secondSection .flip-card {
+  background-color: transparent;
+  width: 900px;
+  height: 300px;
+  perspective: 1000px;
+}
+.secondSection .flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+.secondSection .flip-card:hover .flip-card-inner {
+  transform: rotateX(-180deg);
+}
+.secondSection .flip-card-inner .baner1 {
+  background-image: url("img/Office.jpg");
+}
+.secondSection .flip-card-inner .baner1, .baner2{
+  position: absolute;
+  text-align: center;
+  color: var(--white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 70px;
+  filter: brightness(95%);
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.secondSection .flip-card-inner .baner1 .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  font-weight: bold;
+}
+.secondSection .flip-card-inner .baner2 {
+  background-image: url("img/Office2.jpg");
+  transform: rotateX(-180deg);
+}
+.secondSection .flip-card-inner .baner2 .container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 25px;
+}
+.secondSection .flip-card-inner .baner2 .container div:nth-child(1) {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.secondSection .flip-card-inner .baner2 .container button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 3px solid var(--white);
+  color: var(--white);
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 30px;
+  width: 150px;
+  transition: 0.3s;
+}
+.secondSection .flip-card-inner .baner2 .container button:hover{
+  color: var(--white);
+  background-color: var(--yellow);
+  border: 3px solid var(--yellow);
+}
